@@ -189,6 +189,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3237775335355052981, guid: 7139ce1b61c018043a8b827f23829238,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237775335355052981, guid: 7139ce1b61c018043a8b827f23829238,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237775335355052982, guid: 7139ce1b61c018043a8b827f23829238,
+        type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3237775335355052983, guid: 7139ce1b61c018043a8b827f23829238,
         type: 3}
       propertyPath: m_Name
