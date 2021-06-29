@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject platformPrefab;
 
-    // Update is called once per frame
-    void Update()
+    public int platformCount = 300;
+
+    private void Start()
     {
-        
+        Vector3 spawnPosition = new Vector3();
+
+        for (int i = 0; i < platformCount; i++)
+        {
+            spawnPosition.y += Random.Range(0.5f, 2f);
+            spawnPosition.x = Random.Range(-3f, 3f);
+            Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+        }
     }
 }
