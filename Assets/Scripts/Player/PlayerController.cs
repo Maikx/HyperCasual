@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool testingOnPc;
     public float moveSpeed = 20f;
     private Rigidbody2D rb;
 
@@ -29,15 +30,19 @@ public class PlayerController : MonoBehaviour
 
         scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
 
-        //moveX = Input.GetAxis("Horizontal") * moveSpeed;
-        accX = Input.acceleration.x * moveSpeed;
+        if(testingOnPc)
+            moveX = Input.GetAxis("Horizontal") * moveSpeed;
+        else
+            accX = Input.acceleration.x * moveSpeed;
     }
 
     private void FixedUpdate()
     {
         Vector2 velocity = rb.velocity;
-        velocity.x = accX;
-        //velocity.x = moveX;
+        if(testingOnPc)
+            velocity.x = moveX;
+        else
+            velocity.x = accX;
         rb.velocity = velocity;
     }
 }
