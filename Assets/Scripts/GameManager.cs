@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager self;
     public GameObject platformPrefab;
 
-    public int platformCount = 300;
+    public int startingPlatformsCount = 15;
 
     private void Start()
     {
+        self = this;
         Vector3 spawnPosition = new Vector3();
 
-        for (int i = 0; i < platformCount; i++)
+        for (int i = 0; i < startingPlatformsCount; i++)
         {
             spawnPosition.y += Random.Range(0.5f, 2f);
-            spawnPosition.x = Random.Range(-3f, 3f);
+            spawnPosition.x = Random.Range(-2.5f, 2.5f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
     }

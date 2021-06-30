@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8794834948704911317}
   - component: {fileID: 7506623885516499983}
+  - component: {fileID: 7539344626168734402}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43,3 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8915380ce333352439203342f4f2b9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 3237775335355052983, guid: 7139ce1b61c018043a8b827f23829238,
+    type: 3}
+  startingPlatformsCount: 15
+--- !u!95 &7539344626168734402
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026930368690935371}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb79c0b9267ec1e4eb1899d7fe83553e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
