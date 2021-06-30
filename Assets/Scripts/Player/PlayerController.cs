@@ -23,26 +23,49 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(rb.velocity.y > 0 && transform.position.y > topScore)
-        {
-            topScore = transform.position.y;
-        }
+        Inputs();
+        Score();
+    }
 
-        scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
+    private void FixedUpdate()
+    {
+        FixedInputs();
+    }
 
-        if(testingOnPc)
+    /// <summary>
+    /// Those are the inputs used ingame, from the inspector you can switch if you want to test from pc
+    /// </summary>
+    private void Inputs()
+    {
+        if (testingOnPc)
             moveX = Input.GetAxis("Horizontal") * moveSpeed;
         else
             accX = Input.acceleration.x * moveSpeed;
     }
 
-    private void FixedUpdate()
+    /// <summary>
+    /// Those are the values given to the rigid body
+    /// </summary>
+    private void FixedInputs()
     {
         Vector2 velocity = rb.velocity;
-        if(testingOnPc)
+        if (testingOnPc)
             velocity.x = moveX;
         else
             velocity.x = accX;
         rb.velocity = velocity;
+    }
+
+    /// <summary>
+    /// This shouldn't be here.. it's used to count the score
+    /// </summary>
+    private void Score()
+    {
+        if (rb.velocity.y > 0 && transform.position.y > topScore)
+        {
+            topScore = transform.position.y;
+        }
+
+        scoreText.text = "" + Mathf.Round(topScore).ToString();
     }
 }

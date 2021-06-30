@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 3237775335355052983, guid: 7139ce1b61c018043a8b827f23829238,
     type: 3}
+  retryButton: {fileID: 0}
+  exitButton: {fileID: 0}
+  music: {fileID: 0}
   startingPlatformsCount: 15
 --- !u!95 &7539344626168734402
 Animator:

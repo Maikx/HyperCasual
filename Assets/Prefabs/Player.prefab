@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191af2f124ced624b867f10cd2f2ffe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testingOnPc: 1
+  testingOnPc: 0
   moveSpeed: 10
   scoreText: {fileID: 0}
